@@ -1,0 +1,104 @@
+<div class="container p-0">
+    <div class="row m-0" cdkDropListGroup>
+        
+        <div class="col-sm bg-light p-2 m-md-2 rounded" cdkDropList [cdkDropListData]="potenialValue"
+            (cdkDropListDropped)="onDrop($event)">
+            <h4 class="fw-bold">Potenial Value</h4>
+            <div class="card shadow-lg" *ngFor="let deals of deals" cdkDrag>
+                <div class="card-body" *ngIf="deals.status==='Potential Value'">
+                    <div class="d-flex justify-content-between">
+                        <h6 class="card-title">{{deals.company}}</h6>
+                        <i class="bi bi-three-dots text-secondary"></i>
+                    </div>
+                    <span class="badge text-bg-secondary p-2">{{deals.state}}</span>
+                    <span class="badge text-bg-primary p-2 m-2">{{deals.probability_status}}</span>
+                    <div class="d-flex">
+                        <p class="text-secondary"><i class="bi bi-telephone"></i> {{deals.first_name}}
+                            {{deals.last_name}}</p>
+                        <span class="text-secondary">{{deals.phone}}</span>
+                    </div>
+                    <p class="text-secondary"><i class="bi bi-calendar me-2"></i>{{deals.date | date}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm bg-light p-2 m-md-2 rounded" cdkDropList [cdkDropListData]="focus"
+            (cdkDropListDropped)="onDrop($event)">
+            <h4 class="fw-bold">Focus</h4>
+            <div class="card shadow-lg" *ngFor="let deals of deals" cdkDrag>
+                <div class="card-body" *ngIf="deals.status==='Focus'">
+                    <div class="d-flex justify-content-between">
+                        <h6 class="card-title">{{deals.company}}</h6>
+                        <i class="bi bi-three-dots text-secondary"></i>
+                    </div>
+                    <span class="badge text-bg-secondary p-2">{{deals.state}}</span>
+                    <span class="badge text-bg-primary p-2 m-2">{{deals.probability_status}}</span>
+                    <div class="d-flex">
+                        <p class="text-secondary"><i class="bi bi-telephone"></i> {{deals.first_name}}
+                            {{deals.last_name}}</p>
+                        <span class="text-secondary">{{deals.phone}}</span>
+                    </div>
+                    <p class="text-secondary"><i class="bi bi-calendar me-2"></i>{{deals.date | date}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm bg-light p-2 m-md-2 rounded" cdkDropList [cdkDropListData]="contactMade"
+            (cdkDropListDropped)="onDrop($event)">
+            <h4 class="fw-bold">contactMade</h4>
+            <div class="card shadow-lg" *ngFor="let deals of deals" cdkDrag>
+                <div class="card-body" *ngIf="deals.status==='Contact Made'">
+                    <div class="d-flex justify-content-between">
+                        <h6 class="card-title">{{deals.company}}</h6>
+                        <i class="bi bi-three-dots text-secondary"></i>
+                    </div>
+                    <span class="badge text-bg-secondary p-2">{{deals.state}}</span>
+                    <span class="badge text-bg-primary p-2 m-2">{{deals.probability_status}}</span>
+                    <div class="d-flex">
+                        <p class="text-secondary"><i class="bi bi-telephone"></i> {{deals.first_name}}
+                            {{deals.last_name}}</p>
+                        <span class="text-secondary">{{deals.phone}}</span>
+                    </div>
+                    <p class="text-secondary"><i class="bi bi-calendar me-2"></i>{{deals.date | date}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm bg-light p-2 m-md-2 rounded" cdkDropList [cdkDropListData]="offerSent"
+            (cdkDropListDropped)="onDrop($event)">
+            <h4 class="fw-bold">Offer Sent</h4>
+            <div class="card shadow-lg" *ngFor="let deals of deals" cdkDrag>
+                <div class="card-body" *ngIf="deals.status==='Offer Sent'">
+                    <div class="d-flex justify-content-between">
+                        <h6 class="card-title">{{deals.company}}</h6>
+                        <i class="bi bi-three-dots text-secondary"></i>
+                    </div>
+                    <span class="badge text-bg-secondary p-2">{{deals.state}}</span>
+                    <span class="badge text-bg-primary p-2 m-2">{{deals.probability_status}}</span>
+                    <div class="d-flex">
+                        <p class="text-secondary"><i class="bi bi-telephone"></i> {{deals.first_name}}
+                            {{deals.last_name}}</p>
+                        <span class="text-secondary">{{deals.phone}}</span>
+                    </div>
+                    <p class="text-secondary"><i class="bi bi-calendar me-2"></i>{{deals.date | date}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm bg-light p-2 m-md-2 rounded" cdkDropList [cdkDropListData]="gettingReady"
+            (cdkDropListDropped)="onDrop($event)">
+            <h4 class="fw-bold">Getting Ready</h4>
+            <div class="card shadow-lg" *ngFor="let deals of deals" cdkDrag>
+                <div class="card-body" *ngIf="deals.status==='Getting Ready'">
+                    <div class="d-flex justify-content-between">
+                        <h6 class="card-title">{{deals.company}}</h6>
+                        <i class="bi bi-three-dots text-secondary"></i>
+                    </div>
+                    <span class="badge text-bg-secondary p-2">{{deals.state}}</span>
+                    <span class="badge text-bg-primary p-2 m-2">{{deals.probability_status}}</span>
+                    <div class="d-flex">
+                        <p class="text-secondary"><i class="bi bi-telephone"></i> {{deals.first_name}}
+                            {{deals.last_name}}</p>
+                        <span class="text-secondary">{{deals.phone}}</span>
+                    </div>
+                    <p class="text-secondary"><i class="bi bi-calendar me-2"></i>{{deals.date | date}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
